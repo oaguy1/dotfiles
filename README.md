@@ -5,3 +5,6 @@ To install the configurations, simply run `stow <config folder>` for each of the
 
 ## vim
 Vim is **the** text editor and I like mine configured closely to stock with some of the creature comforts enabled.
+
+## fish
+Nothing too special here, just declaring my love of vim bindings and setting vim as my default editor.
