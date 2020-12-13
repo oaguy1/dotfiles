@@ -70,3 +70,5 @@ fi
 
 export VISUAL=vim
 export EDITOR=$VISUAL
+
+export PATH=$PATH:$HOME/.local/bin
