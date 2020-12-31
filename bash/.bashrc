@@ -51,6 +51,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias mkctl="microk8s kubectl"
 
 
 
@@ -72,3 +73,4 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 
 export PATH=$PATH:$HOME/.local/bin
+source "$HOME/.cargo/env"
