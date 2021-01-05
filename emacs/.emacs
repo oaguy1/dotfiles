@@ -1,32 +1,42 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(custom-enabled-themes (quote (wombat)))
- '(package-selected-packages (quote (evil slime)))
- '(scroll-bar-mode (quote left)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
+;; Go straight to *scratch*
+(setq inhibit-startup-message t)
 
-;; Set up package.el to work with MELPA
+;; Turn off scrollbar
+(scroll-bar-mode -1)
+
+;; Load my preferred theme
+(load-theme 'wombat)
+
+;; Set Fira Code to be typeface if in GUI mode
+(unless (display-graphic-p)
+    (set-face-attribute 'default nil :font "Fira Code" :height 110))
+
+;; Make escape quit prompts
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+;; Set up package.el to query different packages
 (require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+			 ("org" . "https://orgmode.org/elpa/")
+			 ("elpa" . "https://melpa.org/packages/")))
 (package-initialize)
-(package-refresh-contents)
+
+;; refresh archive contents if none exists
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
+(require 'use-package)
+(setq use-package-always-ensure t)
 
 ;; install evil packages if not present
 (unless (package-installed-p 'evil)
   (package-install 'evil))
 
 ;; configure evil mode
-(require 'evil)
-(evil-mode 0)
+(use-package evil
+  :config
+  (evil-mode 1))
