@@ -40,3 +40,9 @@
 (use-package evil
   :config
   (evil-mode 1))
+
+(use-package slime
+  :config
+  (setq inferior-lisp-program "sbcl"))
+
+(use-package magit)
