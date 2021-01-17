@@ -74,3 +74,8 @@ export EDITOR=$VISUAL
 
 export PATH=$PATH:$HOME/.local/bin
 source "$HOME/.cargo/env"
+
+## Add terraform bash completion, if terraform is installed
+if [ -f /usr/bin/terraform ]; then
+  complete -C /usr/bin/terraform terraform
+fi
