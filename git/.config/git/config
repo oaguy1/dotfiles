@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Lily Hughes-Robinson
+	email = oaguy1@gmail.com
+[pull]
+	rebase = false
+[init]
+	templateDir = ~/.config/git/template
