@@ -73,7 +73,11 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 
 export PATH=$PATH:$HOME/.local/bin
-source "$HOME/.cargo/env"
+
+# If Rust is installed, initialize cargo
+if [ -f $HOME/.cargo/env ]; then
+  source "$HOME/.cargo/env"
+fi
 
 ## Add terraform bash completion, if terraform is installed
 if [ -f /usr/bin/terraform ]; then
