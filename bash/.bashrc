@@ -1,3 +1,9 @@
+## Global Definitions (Fedora)
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 ## HISTORY
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -72,14 +78,20 @@ fi
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-export PATH=$PATH:$HOME/.local/bin
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
 
+## Third Party Integrations
 # If Rust is installed, initialize cargo
 if [ -f $HOME/.cargo/env ]; then
   source "$HOME/.cargo/env"
 fi
 
-## Add terraform bash completion, if terraform is installed
+# Add terraform bash completion, if terraform is installed
 if [ -f /usr/bin/terraform ]; then
   complete -C /usr/bin/terraform terraform
 fi
