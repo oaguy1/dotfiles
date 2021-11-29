@@ -92,7 +92,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(w3m markdown-mode cider use-package smex slime rainbow-delimiters projectile magit ivy evil clojure-mode-extra-font-locking)))
+   (quote
+    (w3m markdown-mode cider use-package smex slime rainbow-delimiters projectile magit ivy evil clojure-mode-extra-font-locking))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
