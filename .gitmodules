@@ -1,3 +1,6 @@
 [submodule "vim/.vim/pack/plugins/start/goyo"]
 	path = vim/.vim/pack/plugins/start/goyo
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "vim/.vim/pack/plugins/start/vimwiki"]
+	path = vim/.vim/pack/plugins/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
