@@ -2,3 +2,10 @@ set number
 filetype plugin indent on
 syntax on
 set backspace=indent,eol,start
+set nocompatible
+
+"" use markdown for vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
+
