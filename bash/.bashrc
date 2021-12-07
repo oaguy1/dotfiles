@@ -58,6 +58,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias mkctl="microk8s kubectl"
+alias newpass='date +%s | md5sum | base64 | head -c 32 | xargs echo'
 
 
 
