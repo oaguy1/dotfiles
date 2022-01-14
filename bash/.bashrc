@@ -53,13 +53,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
+# some more useful aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias mkctl="microk8s kubectl"
 alias newpass='date +%s | md5sum | base64 | head -c 32 | xargs echo'
-
+alias tls='tmux list-sessions'
+alias ta='tmux attach-session -t'
 
 
 # enable programmable completion features (you don't need to enable
