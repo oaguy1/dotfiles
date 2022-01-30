@@ -7,3 +7,6 @@
 [submodule "vim/.vim/pack/plugins/start/fzf.vim"]
 	path = vim/.vim/pack/plugins/start/fzf.vim
 	url = ssh://git@github.com/junegunn/fzf.vim.git
+[submodule "vim/.vim/pack/plugins/start/vim-css-color"]
+	path = vim/.vim/pack/plugins/start/vim-css-color
+	url = https://github.com/ap/vim-css-color
