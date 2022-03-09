@@ -9,4 +9,9 @@ set laststatus=2
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
+"" integrate Goyo and Limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
+"" specify limelight color
+let g:limelight_conceal_ctermfg = 'darkgray'
