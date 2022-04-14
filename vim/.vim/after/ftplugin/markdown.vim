@@ -15,6 +15,9 @@ inoremap <Up> <C-o>gk
 " Turn on spell checking
 setlocal spell
 
+" Turn off line numbers
+setlocal nonumber
+
 " Add wordcount to status
 setlocal statusline=%f\ %h%w%m%r
 setlocal statusline+=%=%{wordcount().words}\ words\ -\ %P

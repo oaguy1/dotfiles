@@ -1,0 +1,2 @@
+# Don't add .spl files from vim
+*.spl
