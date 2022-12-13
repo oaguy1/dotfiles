@@ -97,3 +97,6 @@ fi
 if [ -f /usr/bin/terraform ]; then
   complete -C /usr/bin/terraform terraform
 fi
+
+## Added from OpenSuSE
+test -s ~/.alias && . ~/.alias || true
