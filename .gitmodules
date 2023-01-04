@@ -16,3 +16,9 @@
 [submodule "vim/.vim/pack/plugins/start/limelight.vim"]
 	path = vim/.vim/pack/plugins/start/limelight.vim
 	url = https://github.com/junegunn/limelight.vim.git
+[submodule "nvim/after/pack/packer/start/packer.nvim"]
+	path = nvim/after/pack/packer/start/packer.nvim
+	url = https://github.com/wbthomason/packer.nvim
+[submodule "nvim/nvim/after/pack/packer/start/packer.nvim"]
+	path = nvim/nvim/after/pack/packer/start/packer.nvim
+	url = https://github.com/wbthomason/packer.nvim
