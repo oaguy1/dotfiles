@@ -2,6 +2,9 @@
 ;; Go straight to *scratch*
 (setq inhibit-startup-message t)
 
+;; Upgrade built-in packages as needed
+(setq package-install-upgrade-built-in t)
+
 ;; Turn off scrollbar
 (scroll-bar-mode -1)
 
@@ -34,6 +37,9 @@
 
 (require 'use-package)
 (setq use-package-always-ensure t)
+
+;; required for a few packages
+(use-package seq)
 
 ;; nice fuzzy-completion lib + evil bindings
 (use-package ivy
@@ -92,8 +98,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (w3m markdown-mode cider use-package smex slime rainbow-delimiters projectile magit ivy evil clojure-mode-extra-font-locking))))
+   '(seq w3m markdown-mode cider use-package smex rainbow-delimiters projectile magit ivy evil clojure-mode-extra-font-locking))
+ '(warning-suppress-types '((use-package) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
