@@ -19,6 +19,3 @@
 [submodule "nvim/nvim/after/pack/packer/start/packer.nvim"]
 	path = nvim/nvim/after/pack/packer/start/packer.nvim
 	url = https://github.com/wbthomason/packer.nvim
-[submodule "vim/.vim/pack/plugins/start/slimv"]
-	path = vim/.vim/pack/plugins/start/slimv
-	url = https://github.com/kovisoft/slimv.git
